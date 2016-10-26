@@ -1,5 +1,6 @@
 package solidhangman;
 
+import solidhangman.game.composers.WordComposer;
 import java.util.ArrayList;
 import java.util.List;
 
