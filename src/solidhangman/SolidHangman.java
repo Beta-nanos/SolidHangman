@@ -8,15 +8,28 @@ public class SolidHangman {
     public static void main(String[] args) {
        Scanner scan = new Scanner(System.in);
        String replayAnswer;
-        
-        do {
-            Hangman game = new ConsoleHangman();
+       
+       System.out.println("");
+       Hangman game = new ConsoleHangman();
+       
+       do {
             game.init();
             String winner = game.play();
             System.out.println(winner + " has won.");
-            System.out.print("Do you want to play again? Y/N: ");
+            System.out.print("1. Show statistics.\n"
+                    + "2. Play again?\nAnswer: ");
             replayAnswer = scan.next();
-        } while(replayAnswer.toLowerCase().charAt(0) == 'y');
+            
+            switch(replayAnswer){
+                case "1":
+                    game.showStats();
+                    break;
+                case "2":
+                default:
+                    replayAnswer = "y";
+                    break;
+            }
+       } while(replayAnswer.equals("y"));
     }
     
 }
