@@ -1,9 +1,9 @@
 
-package solidhangman.game.managers;
+package solidhangman.game.exceptions;
 
 public class WrongInputException extends Exception {
 
-    WrongInputException(char option) {
+    public WrongInputException(char option) {
         super("Wrong input: "+option+". Expected a number from the choices.");
     }
 }

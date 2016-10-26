@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import solidhangman.game.managers.WrongInputException;
+import solidhangman.game.exceptions.WrongInputException;
 
 public class Hangman {
 

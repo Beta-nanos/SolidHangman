@@ -1,0 +1,6 @@
+
+package solidhangman;
+
+class WordBuilder {
+    
+}

@@ -1,6 +1,7 @@
 
 package solidhangman.game.managers;
 
+import solidhangman.game.exceptions.WrongInputException;
 import java.util.List;
 import solidhangman.OPTION;
 import solidhangman.Player;
