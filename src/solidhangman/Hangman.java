@@ -1,11 +1,13 @@
 package solidhangman;
 
+import solidhangman.game.wordbuilders.WordBuilder;
 import solidhangman.game.managers.GameManager;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import solidhangman.game.exceptions.WrongInputException;
+import solidhangman.game.exceptions.WrongLetterException;
 
 public class Hangman {
 
@@ -70,8 +72,19 @@ public class Hangman {
         match.setPlayer(currentPlayer);
         currentPlayer = gameManager.nextPlayerToPlay(currentPlayer);
         do {
-            match.inputValidation(wordBuilder.getLetter());
+            char letter = obtainLetter();
+            match.inputValidation(letter);
         } while (!match.hasFinished());
     }
 
+    private char obtainLetter() {
+        char letter;
+        try {
+            letter =wordBuilder.getLetter();
+        } catch (WrongLetterException ex) {
+            System.out.println(ex.getMessage());
+            letter=obtainLetter();
+        }
+        return letter;
+    }
 }
