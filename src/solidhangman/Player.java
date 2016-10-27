@@ -4,8 +4,8 @@ public class Player {
     private Statistics statistics;
     private String name;
 
-    public Player(String _name) {
-        name = _name;
+    public Player(String name) {
+        this.name = name;
         statistics = new Statistics();
     }
 
@@ -16,7 +16,7 @@ public class Player {
     }
     
     public String getName(){
-        return name;
+        return this.name;
     }
     
     public Statistics getStatistics(){

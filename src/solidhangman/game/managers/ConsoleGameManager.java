@@ -10,13 +10,11 @@ import solidhangman.Player;
 public class ConsoleGameManager implements GameManager{
     private List<Player> players;
     
-    Scanner scan = new Scanner(System.in);
-    public ConsoleGameManager() {
-    }
+    private Scanner scan = new Scanner(System.in);
 
     @Override
     public void showGameMenu() {
-        System.out.println("1.Add new word\n2. Show statistics\n3.Exit");
+        System.out.print("1.Add new word\n2.Show statistics\n3.Exit\nOption: ");
     }
 
     @Override
@@ -26,7 +24,7 @@ public class ConsoleGameManager implements GameManager{
        
             switch (option){
                 case '1':
-                        chosenOption = OPTION.PLAY;
+                    chosenOption = OPTION.PLAY;
                     break;
                  case '2':
                      chosenOption = OPTION.SHOW_STATS;
@@ -63,10 +61,10 @@ public class ConsoleGameManager implements GameManager{
         char option = scan.next().toUpperCase().charAt(0);
         switch (option){
             case '1':
-                    createPlayers(1);
+                createPlayers(1);
                 break;
             case '2':
-                    createPlayers(2);
+                createPlayers(2);
                 break;
             default:
                 throw new WrongInputException(option);
@@ -74,7 +72,7 @@ public class ConsoleGameManager implements GameManager{
     }
     
     private void createPlayers(int amount){
-        for(int i =0; i < amount; i++){
+        for(int i = 0; i < amount; i++){
             this.players.add(new Player("Player "+(i+1)));
         }
     }

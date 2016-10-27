@@ -5,7 +5,7 @@ public class Word {
     private int wordLength;
     
     public Word(String word) {
-        this.wordText = word;
+        this.wordText = word.toUpperCase();
         this.wordLength = word.length();
     }
   
