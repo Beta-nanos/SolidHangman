@@ -32,10 +32,12 @@ class Match {
     boolean hasFinished() {
         if(lives == 0){
             player.getStatistics().incrementMatchesLost();
+            System.out.println("Out of luck! You've lost this match! The word was: " + word.getWordText());
             return true;
         }
         if(wordTextDuplicate.length() == 0){
             player.getStatistics().incrementMatchesWon();
+            System.out.println("You won this match! The word was: " + word.getWordText());
             return true;
         }
         return false;
