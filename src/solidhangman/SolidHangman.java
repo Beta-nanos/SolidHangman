@@ -1,5 +1,7 @@
 package solidhangman;
 
+import solidhangman.game.hangmen.Hangman;
+import solidhangman.game.hangmen.ConsoleHangman;
 import java.io.IOException;
 import java.util.Scanner;
 import solidhangman.game.exceptions.IncorrectPlayerSizeException;

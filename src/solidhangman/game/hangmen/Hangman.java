@@ -1,5 +1,6 @@
-package solidhangman;
+package solidhangman.game.hangmen;
 
+import solidhangman.game.players.Player;
 import solidhangman.game.matches.ConsoleMatch;
 import solidhangman.game.matches.Match;
 import java.io.IOException;
