@@ -41,11 +41,12 @@ public class ConsoleWordComposer implements WordComposer{
     public Word getWord() {
         switch(wordMode){
             case FILE:
-                int indexCurrentWord = words.indexOf(currentWord);  
+                int indexCurrentWord = words.indexOf(currentWord); 
                 if(indexCurrentWord == words.size()-1)
-                    return words.get(0);
+                    currentWord= words.get(0);
                 else
-                    return words.get(indexCurrentWord + 1);
+                    currentWord= words.get(indexCurrentWord + 1);
+                return currentWord;
             case USER:
                 return getWordFromUser();
             default:
