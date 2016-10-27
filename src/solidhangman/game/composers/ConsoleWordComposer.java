@@ -1,6 +1,7 @@
 package solidhangman.game.composers;
 
 import java.io.BufferedReader;
+import java.io.Console;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -71,8 +72,11 @@ public class ConsoleWordComposer implements WordComposer{
 
     private Word getWordFromUser() {
         System.out.print("Insert word for the next player to guess: ");
+        Console console = System.console();
         Scanner scan = new Scanner(System.in);
         
-        return new Word(scan.next());
+        char [] rivalWord = console.readPassword();
+        
+        return new Word(new String(rivalWord    ));
     }
 }
