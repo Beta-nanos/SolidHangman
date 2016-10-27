@@ -1,11 +1,14 @@
 package solidhangman;
 
+import java.io.IOException;
 import java.util.Scanner;
+import solidhangman.game.exceptions.IncorrectPlayerSizeException;
+import solidhangman.game.exceptions.NoWordsInFileException;
 
 
 public class SolidHangman {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IncorrectPlayerSizeException, NoWordsInFileException, IOException {
        Scanner scan = new Scanner(System.in);
        boolean continuePlaying;
       

@@ -1,14 +1,21 @@
-
 package solidhangman;
 
 public class Player {
+    private Statistics statistics;
+    private String name;
 
-    public Player(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Player(String _name) {
+        name = _name;
+        statistics = new Statistics();
     }
 
     public void showMyStats() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.print(getName() + "'s statistics:");
+        System.out.print("Matches won: " + statistics.getMatchesWon());
+        System.out.print("Matches lost: " + statistics.getMatchesLost());
     }
     
+    public String getName(){
+        return name;
+    }
 }

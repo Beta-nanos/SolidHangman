@@ -1,5 +1,6 @@
 package solidhangman;
 
+import java.io.IOException;
 import solidhangman.game.composers.WordComposer;
 import solidhangman.game.wordbuilders.WordBuilder;
 import solidhangman.game.managers.GameManager;
@@ -7,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import solidhangman.game.exceptions.IncorrectPlayerSizeException;
+import solidhangman.game.exceptions.NoWordsInFileException;
 import solidhangman.game.exceptions.WrongInputException;
 import solidhangman.game.exceptions.WrongLetterException;
 
@@ -24,7 +27,7 @@ public class Hangman {
         this.wordBuilder = wordBuilder;
     }
 
-    public void init() {
+    public void init() throws IncorrectPlayerSizeException, NoWordsInFileException, IOException {
         players = new ArrayList<>();
         try {
             gameManager.initPlayers(players);

@@ -1,5 +1,6 @@
 package solidhangman;
 
+import solidhangman.game.composers.ConsoleWordComposer;
 import solidhangman.game.wordbuilders.ConsoleWordBuilder;
 import solidhangman.game.managers.ConsoleGameManager;
 
