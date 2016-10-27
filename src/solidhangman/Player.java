@@ -10,9 +10,9 @@ public class Player {
     }
 
     public void showMyStats() {
-        System.out.print(getName() + "'s statistics:");
-        System.out.print("Matches won: " + statistics.getMatchesWon());
-        System.out.print("Matches lost: " + statistics.getMatchesLost());
+        System.out.println(getName() + "'s statistics:");
+        System.out.println("Matches won: " + statistics.getMatchesWon());
+        System.out.println("Matches lost: " + statistics.getMatchesLost());
     }
     
     public String getName(){

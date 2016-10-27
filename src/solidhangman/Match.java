@@ -5,16 +5,16 @@ import solidhangman.game.composers.Word;
 class Match {
     private Player player;
     private Word word;
-    private int vidas;
+    private int lives;
     private String wordTextDuplicate;
     
     public Match(){
-        vidas = 6;
+        lives = 6;
     }
 
     void setWord(Word _word) {
         word = _word;
-        wordTextDuplicate = _word.getWordText();
+        wordTextDuplicate = _word.getWordText().toUpperCase();
     }
 
     void setPlayer(Player currentPlayer) {
@@ -25,12 +25,12 @@ class Match {
         if(wordTextDuplicate.contains(String.valueOf(letter))){
             removeLetterFromWord(letter);
         }else{
-            vidas--;
+            lives--;
         }
     }
 
     boolean hasFinished() {
-        if(vidas == 0){
+        if(lives == 0){
             player.getStatistics().incrementMatchesLost();
             return true;
         }
@@ -42,11 +42,11 @@ class Match {
     }
 
     private void removeLetterFromWord(char letter) {
-        StringBuilder sb = new StringBuilder(wordTextDuplicate);
+        String newWord = "";
         for(int i = 0; i < wordTextDuplicate.length(); i++){
-            if(wordTextDuplicate.charAt(i) == letter)
-                sb.deleteCharAt(i);
+            if(wordTextDuplicate.charAt(i) != letter)
+                newWord += wordTextDuplicate.charAt(i);
         }
-        wordTextDuplicate = sb.toString();
+        wordTextDuplicate = newWord;
     }
 }
