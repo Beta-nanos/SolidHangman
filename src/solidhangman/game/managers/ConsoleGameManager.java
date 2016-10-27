@@ -4,8 +4,8 @@ package solidhangman.game.managers;
 import solidhangman.game.exceptions.WrongInputException;
 import java.util.List;
 import java.util.Scanner;
-import solidhangman.OPTION;
-import solidhangman.Player;
+import solidhangman.game.hangmen.OPTION;
+import solidhangman.game.players.Player;
 
 public class ConsoleGameManager implements GameManager{
     private List<Player> players;

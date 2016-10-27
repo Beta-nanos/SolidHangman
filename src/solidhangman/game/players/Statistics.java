@@ -1,4 +1,4 @@
-package solidhangman;
+package solidhangman.game.players;
 
 public class Statistics {
     private int MatchesWon;

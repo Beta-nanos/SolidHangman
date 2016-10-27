@@ -1,4 +1,4 @@
-package solidhangman;
+package solidhangman.game.hangmen;
 
 import solidhangman.game.composers.ConsoleWordComposer;
 import solidhangman.game.wordbuilders.ConsoleWordBuilder;

@@ -3,8 +3,8 @@ package solidhangman.game.managers;
 
 import solidhangman.game.exceptions.WrongInputException;
 import java.util.List;
-import solidhangman.OPTION;
-import solidhangman.Player;
+import solidhangman.game.hangmen.OPTION;
+import solidhangman.game.players.Player;
 
 public interface GameManager {
     

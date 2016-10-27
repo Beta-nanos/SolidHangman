@@ -1,6 +1,6 @@
 package solidhangman.game.matches;
 
-import solidhangman.Player;
+import solidhangman.game.players.Player;
 import solidhangman.game.composers.Word;
 
 public interface Match {    

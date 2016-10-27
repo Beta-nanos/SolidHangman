@@ -1,4 +1,4 @@
-package solidhangman;
+package solidhangman.game.players;
 
 public class Player {
     private Statistics statistics;
