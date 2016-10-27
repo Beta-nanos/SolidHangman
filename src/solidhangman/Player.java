@@ -18,4 +18,8 @@ public class Player {
     public String getName(){
         return name;
     }
+    
+    public Statistics getStatistics(){
+        return statistics;
+    }
 }
