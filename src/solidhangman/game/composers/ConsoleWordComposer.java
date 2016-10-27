@@ -1,6 +1,7 @@
 package solidhangman.game.composers;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -53,7 +54,10 @@ public class ConsoleWordComposer implements WordComposer{
     }
 
     private void getWordsFromFile() throws FileNotFoundException, IOException, NoWordsInFileException {
-        FileReader file = new FileReader("words.hng");
+        File fil = new File("words.txt");
+        System.out.println(fil.getAbsolutePath());
+        FileReader file = new FileReader("words.txt");
+        
         BufferedReader buffer = new BufferedReader(file);
         String word = null;
         while((word = buffer.readLine()) != null){
