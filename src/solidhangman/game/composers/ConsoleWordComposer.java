@@ -55,8 +55,6 @@ public class ConsoleWordComposer implements WordComposer{
     }
 
     private void getWordsFromFile() throws FileNotFoundException, IOException, NoWordsInFileException {
-        File fil = new File("words.txt");
-        System.out.println(fil.getAbsolutePath());
         FileReader file = new FileReader("words.txt");
         
         BufferedReader buffer = new BufferedReader(file);

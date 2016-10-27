@@ -1,5 +1,6 @@
 package solidhangman.game.hangmen;
 
+import java.io.FileNotFoundException;
 import solidhangman.game.players.Player;
 import solidhangman.game.matches.ConsoleMatch;
 import solidhangman.game.matches.Match;
@@ -39,6 +40,9 @@ public class Hangman {
         try{
             wordComposer.setActivePlayers(players.size());
         } catch (NoWordsInFileException ex){
+            System.out.println(ex.getMessage());
+            init();
+        } catch (FileNotFoundException ex){
             System.out.println(ex.getMessage());
             init();
         }
