@@ -1,5 +1,7 @@
 package solidhangman;
 
+import solidhangman.game.matches.ConsoleMatch;
+import solidhangman.game.matches.Match;
 import java.io.IOException;
 import solidhangman.game.composers.WordComposer;
 import solidhangman.game.wordbuilders.WordBuilder;
@@ -74,7 +76,7 @@ public class Hangman {
     }
 
     private void executeMatch() {
-        Match match = new Match();
+        Match match = new ConsoleMatch();
         match.setWord(wordComposer.getWord());
         match.setPlayer(currentPlayer);
         currentPlayer = gameManager.nextPlayerToPlay(currentPlayer);
