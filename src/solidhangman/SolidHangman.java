@@ -15,7 +15,7 @@ public class SolidHangman {
        boolean continuePlaying;
       
        Hangman game = new ConsoleHangman();
-       
+      
        do {
            System.out.println("Welcome to Solid Hangman-Remix 2016!");
            System.out.print("Do you want to play? Y/N: ");
